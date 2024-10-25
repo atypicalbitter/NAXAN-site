@@ -242,6 +242,7 @@ width: 100%;
   background-size: cover;
   position: relative;
   color: #fff;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 
@@ -249,7 +250,7 @@ width: 100%;
   margin: 1rem;
   height: 525px;
   width: 400px;
-  border-radius: 5px;
+  border-radius: 15px;
   background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(17,17,17,0.6) 100%),url('./images/pexels-screen.jpg');
   background-size: cover;
   position: relative;
@@ -283,11 +284,17 @@ width: 100%;
   font-size: 1rem;
 }
 
-
+.services-card:hover {
+  transform: scale(1.055);
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
 
 /* ------ MEDIA QUERIES ------ */
  
 @media screen and (max-width: 960px) {
+
+  /* NAV */
   .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -380,6 +387,18 @@ transform: translateY(8px) rotate(45deg);
   #mobile-menu.is-active .bar:nth-child(3) {
 transform: translateY(-8px) rotate(-45deg);
   }
+
+
+  /* SERVICES */
+
+  .services {
+    height: 1600px; 
+  }
+
+  .services h1 {
+    font-size: 2rem;
+    margin-top: 12rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -416,6 +435,8 @@ transform: translateY(-8px) rotate(-45deg);
   }
 
   @media screen and (max-width: 480px){
+
+    /* HERO */
     .main-content h1 {
       font-size: 2rem;
       margin-top: 3rem;
@@ -433,6 +454,19 @@ transform: translateY(-8px) rotate(-45deg);
       .main-btn {
         padding: 12px 36px;
         margin: 2.5rem 0;
+      }
+
+      /* SERVICES */
+      .services {
+        height: max-content;
+      }
+
+      .services h1 {
+        font-size: 1rem;
+      }
+
+      .services-card, .services-card:nth-child(2) {
+        width: 350px;
       }
   }
   

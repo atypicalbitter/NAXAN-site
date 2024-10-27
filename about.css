@@ -5,6 +5,10 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
+body {
+  background-color: #141414;
+}
+
 
 /* ------ NAVBAR & LOG0 ------ */
 .navbar {
@@ -158,7 +162,7 @@
 
 .main-btn {
   font-size: 1rem;
-  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100% );
+  background-image: linear-gradient(to top, #f77062 0%, #fe5196 100% ) !important;
   padding: 14px 32px;
    border: none;
    border-radius: 4px;
@@ -168,12 +172,14 @@
    position: relative;
    transition: all 0.5s;
    outline: none;
+
 }
 .main-btn a {
   position: relative;
   z-index: 2;
   color: #fff;
   text-decoration: none;
+  background-color: none !important;
 }
 
 .main-btn::after {
@@ -238,6 +244,7 @@ width: 100%;
   flex-direction: column;
   align-items: center;
   height: 100vh;
+
 }
 
 .services h1 {
@@ -307,6 +314,7 @@ width: 100%;
   position: absolute;
   top: 350px;
   left: 30px;
+  background: none !important;
 }
 
 
@@ -314,6 +322,7 @@ width: 100%;
   position: absolute;
   top: 400px;
   left: 30px;
+  background: none !important;
 }
 
 .services-card button {
@@ -322,7 +331,7 @@ width: 100%;
   border: none;
   outline: none;
   border-radius: 4px;
-  background: #f77062;
+  background: #f77062 !important;
   position: absolute;
   top: 440px;
   left: 30px;
@@ -342,7 +351,10 @@ width: 100%;
 
 .timel {
   background-color: #141414;
-  height: 50vh;
+margin: 0;
+padding: 0;
+height: 50vh;
+width: 100vw;
 }
 
 .timel-container{
@@ -351,7 +363,7 @@ width: 100%;
   align-items: center;
   justify-self: center;
   margin: 0 auto;
-  height: 20vh;
+  height: 50vh;
   background-color: #141414;
   z-index: 1;
   width: 100%;
@@ -365,6 +377,7 @@ width: 100%;
 .timel-container.show {
   opacity: 1;
   transform: translateY(0);
+  background-color: #141414;
 }
 
 .timel-content h1 {
@@ -526,6 +539,13 @@ margin-bottom: 16px;
 
 
 /* ------ MEDIA QUERIES ------ */
+
+@media screen and (max-width: 1700px) {
+  .services {
+    /* height: 1600px;  */
+    margin-bottom: 500px;
+  }
+}
  
 @media screen and (max-width: 960px) {
 
@@ -628,9 +648,10 @@ transform: translateY(-8px) rotate(-45deg);
 
   .services {
     height: 1600px; 
+    margin-bottom: 900px;
   }
 
-  .services h1 {
+  .timel-container h1 {
     font-size: 2rem;
     margin-top: 12rem;
   }
@@ -659,7 +680,7 @@ transform: translateY(-8px) rotate(-45deg);
 
 @media screen and (max-width: 768px) {
 
-  .main-container {
+  .timel-container {
     display: grid;
     grid-template-columns: auto;
     align-items: center;
@@ -669,21 +690,21 @@ transform: translateY(-8px) rotate(-45deg);
     height: 90vh;
   }
 
-  .main-content {
+  .timel-content {
     text-align: center;
     margin-bottom: 4rem;
   }
 
-  .main-content h1 {
+  .timel-content h1 {
     font-size: 2.5rem;
     margin-top: 2rem;
   }
 
-  .main-content h2 {
+  .timel-content h2 {
     font-size: 3rem;
   }
 
-    .main-content p {
+    .timel-content p {
       margin-top: 1rem;
       font-size: 1.5rem;
     }
@@ -693,21 +714,21 @@ transform: translateY(-8px) rotate(-45deg);
   @media screen and (max-width: 480px){
 
     /* HERO */
-    .main-content h1 {
+    .timel-content h1 {
       font-size: 2rem;
       margin-top: 3rem;
     }
   
-    .main-content h2 {
+    .timel-content h2 {
       font-size: 2rem;
     }
   
-      .main-content p {
+      .timel-content p {
         margin-top: 2rem;
         font-size: 1.5rem;
       }
 
-      .main-btn {
+      .timel-btn {
         padding: 12px 36px;
         margin: 2.5rem 0;
       }
@@ -715,14 +736,19 @@ transform: translateY(-8px) rotate(-45deg);
       /* SERVICES */
       .services {
         height: max-content;
+        margin-bottom: 500px;
       }
 
       .services h1 {
-        font-size: 1rem;
+        font-size: 2rem;
       }
 
-      .services-card, .services-card:nth-child(2) {
+      .services-card, .services-card:nth-child(2), .services-card:nth-child(3), .services-card:nth-child(4) {
         width: 350px;
+      }
+
+      .timel-content.show {
+        margin-bottom: 100px;
       }
 
       /* FOOTER */

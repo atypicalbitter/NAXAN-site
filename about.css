@@ -108,6 +108,7 @@
 
 /* ------ HERO SECTION ------ */
 
+
 .main {
   background-color: #141414;
 }
@@ -228,8 +229,8 @@ width: 100%;
   max-height: 100%; 
 }
 
-
 /* ------ SERVICES SECTION ------ */
+
 
 .services {
   background: #141414;
@@ -255,6 +256,7 @@ width: 100%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background: #141414;
 }
 
 .services-card {
@@ -333,6 +335,79 @@ width: 100%;
   transition: all 0.6s ease;
   cursor: pointer;
 }
+
+
+
+/* ------ TIMELINE SECTION ------ */
+
+.timel {
+  background-color: #141414;
+  height: 50vh;
+}
+
+.timel-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-self: center;
+  margin: 0 auto;
+  height: 20vh;
+  background-color: #141414;
+  z-index: 1;
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 50px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.timel-container.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.timel-content h1 {
+  font-size: 4rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.timel-content h2 {
+  font-size: 2rem;
+  background-color: #ff8177;
+  background-image: linear-gradient(to top, #9767ae 0%, #21d4fd 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.timel-content p {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+
+.timel-img-container {
+  text-align: center;
+}
+
+#timel-img {
+  height: 70%;
+  width: 70%;
+}
+
+
+
 
 
 /* ------ FOOTER SECTION ------ */

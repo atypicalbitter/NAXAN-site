@@ -6,6 +6,29 @@
 }
 
 
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #141414;
+}
+
+
+.fade.fade-in {
+  opacity: 1;
+  background-color: #141414;
+}
+
+
+.fade.fade-out {
+  opacity: 0;
+  background-color: #141414;
+}
+
+body {
+  background-color: #141414;
+}
+
+
 /* ------ NAVBAR & LOG0 ------ */
 .navbar {
   background: #131313;
@@ -173,6 +196,7 @@
   z-index: 2;
   color: #fff;
   text-decoration: none;
+  cursor: pointer !important;
 }
 
 .main-btn::after {

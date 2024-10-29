@@ -5,6 +5,24 @@
   font-family: "Kumbh Sans", sans-serif;
 }
 
+.fade {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-color: #141414;
+}
+
+
+.fade.fade-in {
+  opacity: 1;
+  background-color: #141414;
+}
+
+
+.fade.fade-out {
+  opacity: 0;
+  background-color: #141414;
+}
+
 body {
   background-color: #141414;
 }

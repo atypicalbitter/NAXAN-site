@@ -31,7 +31,7 @@ body {
 
 /* ------ NAVBAR & LOG0 ------ */
 .navbar {
-  background: #131313;
+  background:#141414;
   height: 80px;
   display: flex;
   justify-content: center;
@@ -141,7 +141,7 @@ body {
   align-items: center;
   justify-self: center;
   margin: 0 auto;
-  height: 90vh;
+  height: 80vh;
   background-color: #141414;
   z-index: 1;
   width: 100%;
@@ -238,6 +238,7 @@ width: 100%;
   justify-content: center;
   height: 100vh;
   background-color: #141414;
+  margin-top: 100px;
 }
 
 .video-section h2 {
@@ -584,6 +585,10 @@ transform: translateY(-8px) rotate(-45deg);
   .social-media-wrap {
     flex-direction: column;
   }
+  .video-section {
+    margin-top: 100px;
+  }
+  
 }
 
 @media screen and (max-width: 768px) {
@@ -595,7 +600,7 @@ transform: translateY(-8px) rotate(-45deg);
     justify-self: center;
     width: 100%;
     margin: 0 auto;
-    height: 90vh;
+    height: 60vh;
   }
 
   .main-content {
